@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from './src/theme/colors';
 import { useFonts } from 'expo-font';
+import { typography } from './src/theme/typography';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -16,7 +17,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Text style={{fontFamily: "Antonio-Medium", fontSize: 22}}>Welcome to React Native</Text>
+      <Text style={{fontFamily: typography.primaryBold, fontSize: 22}}>Welcome to React Native</Text>
       <StatusBar style="auto" />
     </View>
   );
