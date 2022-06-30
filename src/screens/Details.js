@@ -8,8 +8,8 @@ import { spacing } from '../theme/spacing';
 export default function Details({ navigation }) {
     return (
         <View style={styles.container}>
-            <PlanetHeader />
-            
+            <PlanetHeader backBtn={true} />
+
         </View>
     )
 }
