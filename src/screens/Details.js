@@ -20,9 +20,29 @@ export default function Details({ navigation, route }) {
                     <Text preset='h1' style={styles.name}>{planet.name}</Text>
                     <Text style={styles.description}>{planet.description}</Text>
                     <Pressable style={styles.source}>
+
                         <Text>Source : </Text>
                         <Text preset='h4' style={styles.wikipedia}>Wikipedia</Text>
                     </Pressable>
+                </View>
+
+                <View style={{ marginTop: spacing[5] }}>
+                    <View style={styles.detailsInfo}>
+                        <Text style={{color: colors.grey, textTransform: 'uppercase'}}>Rotation Time</Text>
+                        <Text preset='h2' style={{textTransform: 'uppercase'}}>{planet.rotationTime} days </Text>
+                    </View>
+                    <View style={styles.detailsInfo}>
+                        <Text style={{color: colors.grey, textTransform: 'uppercase'}}>Revolution Time</Text>
+                        <Text preset='h2' style={{textTransform: 'uppercase'}}>{planet.revolutionTime} </Text>
+                    </View>
+                    <View style={styles.detailsInfo}>
+                        <Text style={{color: colors.grey, textTransform: 'uppercase'}}>Radius</Text>
+                        <Text preset='h2' style={{textTransform: 'uppercase'}}>{planet.radius} km </Text>
+                    </View>
+                    <View style={styles.detailsInfo}>
+                        <Text style={{color: colors.grey, textTransform: 'uppercase'}}>average temp</Text>
+                        <Text preset='h2' style={{textTransform: 'uppercase'}}> {planet.avgTemp} </Text>
+                    </View>
                 </View>
             </ScrollView>
         </View>
@@ -68,6 +88,17 @@ const styles = StyleSheet.create({
     wikipedia: {
         textDecorationLine: 'underline',
         fontWeight: 'bold'
+    },
+    detailsInfo: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderColor: colors.white,
+        borderWidth: 0.5,
+        margin: spacing[2],
+        padding: spacing[2],
+        borderRadius: 5,
+        textTransform: 'uppercase'
     }
 
 })
