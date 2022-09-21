@@ -9,6 +9,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default function Home({ navigation }) {
     return (
+
         <View style={styles.container}>
             <PlanetHeader />
             <FlatList
