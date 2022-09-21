@@ -5,10 +5,12 @@ import PlanetHeader from './../components/PlanetHeader';
 import { colors } from '../theme/colors';
 import { spacing } from '../theme/spacing';
 
-export default function Details({ navigation }) {
+export default function Details({ navigation , route}) {
+    const planet = route.params.planet;
+    console.log('planet', planet)
     return (
         <View style={styles.container}>
-            <PlanetHeader backBtn={true} />
+            <PlanetHeader backBtn={true} title={planet.name} />
 
         </View>
     )

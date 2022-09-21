@@ -20,6 +20,7 @@ export default function App() {
   if (!loaded) {
     return <Text>Font is loading...</Text>
   }
+  
   return (
     <>
       <NavigationContainer theme={DarkTheme}>
