@@ -49,6 +49,7 @@ export default function Details({ navigation, route }) {
     )
 }
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
